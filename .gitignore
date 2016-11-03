@@ -1,0 +1,6 @@
+.idea
+Podfile.lock
+Pods
+*/.DS_Store
+.DS_Store
+libs

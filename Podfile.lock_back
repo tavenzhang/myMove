@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.0.1)
+  - BBSZLib (0.0.2)
+  - CocoaAsyncSocket (7.5.0):
+    - CocoaAsyncSocket/GCD (= 7.5.0)
+  - CocoaAsyncSocket/GCD (7.5.0)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - CryptoSwift (0.6.1)
+  - Fabric (1.6.10)
+  - MJRefresh (3.1.12)
+  - NSLogger/NoStrip (1.7.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (3.0.2)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - BBSZLib
+  - CocoaAsyncSocket
+  - Crashlytics
+  - CryptoSwift
+  - Fabric
+  - MJRefresh
+  - NSLogger/NoStrip
+  - SDWebImage
+  - SnapKit
+  - SVProgressHUD
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  BBSZLib: ba259b9e5a8250598a8c7ca88829663ce17d803d
+  CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  CryptoSwift: abdbc1bf32c89117c6b403810a7b30f742d86e68
+  Fabric: c73f371ee543e3f0b80608f2674750e4910d1669
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: a0a78e725f881168320daefa4c71fa69a09cb8d9
+
+COCOAPODS: 1.1.0.rc.3
