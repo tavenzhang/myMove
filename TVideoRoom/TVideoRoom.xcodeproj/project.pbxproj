@@ -48,6 +48,10 @@
 		DE383B951DAF2DFA00EFB767 /* playListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE383B941DAF2DFA00EFB767 /* playListCell.swift */; };
 		DE383B971DAF36F600EFB767 /* TSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE383B961DAF36F600EFB767 /* TSegmentedControl.swift */; };
 		DE68250B1DAD178000930197 /* StringUitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68250A1DAD178000930197 /* StringUitls.swift */; };
+		DE688D801DCC28140036A16C /* TAmf3Socket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9937861DB268EF00D0B326 /* TAmf3Socket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE688D891DCC5F560036A16C /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE688D881DCC5F560036A16C /* CocoaAsyncSocket.framework */; };
+		DE688D8B1DCC5F720036A16C /* Pods_TAmf3Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE688D8A1DCC5F720036A16C /* Pods_TAmf3Socket.framework */; };
+		DE688D8D1DCC60320036A16C /* TRtmpPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE688D8C1DCC60320036A16C /* TRtmpPlay.framework */; };
 		DE696B131D2E3B66007F69F7 /* AlertViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE696B121D2E3B66007F69F7 /* AlertViewUtils.swift */; };
 		DE6E00101DB4C58200E768A8 /* MyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E000F1DB4C58200E768A8 /* MyExtension.swift */; };
 		DE6EFFFA1DB4681D00E768A8 /* ShowVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6EFFF91DB4681D00E768A8 /* ShowVideoViewController.swift */; };
@@ -132,10 +136,6 @@
 		DEC726931DAE856500C5E5A5 /* ScreenShot3.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC726611DAE856500C5E5A5 /* ScreenShot3.png */; };
 		DEC726951DAE889300C5E5A5 /* 05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC726941DAE889300C5E5A5 /* 05@2x.png */; };
 		DEC8B3631D58CEFD000ACEBF /* EventCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8B3621D58CEFD000ACEBF /* EventCollection.swift */; };
-		DECBFB181DB4E15F00B19A8B /* TRtmpPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECBFB171DB4E15F00B19A8B /* TRtmpPlay.framework */; };
-		DECBFB201DB4F15200B19A8B /* BBSZLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECBFB1E1DB4F15200B19A8B /* BBSZLib.framework */; };
-		DECBFB211DB4F15200B19A8B /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECBFB1F1DB4F15200B19A8B /* CocoaAsyncSocket.framework */; };
-		DECBFB541DB4FB3E00B19A8B /* TAmf3Socket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9937861DB268EF00D0B326 /* TAmf3Socket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DECECCBD1D2B606C0030939E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DECECCBC1D2B606C0030939E /* libsqlite3.tbd */; };
 		DEDF8C711D1A5C7C005A7AC4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDF8C701D1A5C7C005A7AC4 /* libz.tbd */; };
 		DEDF8C731D1A5C8C005A7AC4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDF8C721D1A5C8C005A7AC4 /* libiconv.tbd */; };
@@ -151,13 +151,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DECBFB551DB4FB3E00B19A8B /* Embed Frameworks */ = {
+		DE688D811DCC28140036A16C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DECBFB541DB4FB3E00B19A8B /* TAmf3Socket.framework in Embed Frameworks */,
+				DE688D801DCC28140036A16C /* TAmf3Socket.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +214,17 @@
 		DE4844821D1A447400C17A5B /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = "/Users/zhangxinhua/Library/Developer/Xcode/DerivedData/My-dtqmqojntoofsheudqnkusrwdgtp/Build/Products/Debug-iphoneos/CocoaAsyncSocket.framework"; sourceTree = "<absolute>"; };
 		DE4844861D1A44C400C17A5B /* Pods_TNetServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Pods_TNetServer.framework; path = "/Users/zhangxinhua/Library/Developer/Xcode/DerivedData/My-dtqmqojntoofsheudqnkusrwdgtp/Build/Products/Debug-iphoneos/Pods_TNetServer.framework"; sourceTree = "<absolute>"; };
 		DE68250A1DAD178000930197 /* StringUitls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUitls.swift; path = TVideoRoom/Toos/Chat/Models/StringUitls.swift; sourceTree = SOURCE_ROOT; };
+		DE688D5F1DCC21F60036A16C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D621DCC21F60036A16C /* BBSZLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BBSZLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D651DCC21F60036A16C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D681DCC21F60036A16C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D6B1DCC21F60036A16C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D6E1DCC22560036A16C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D791DCC22DD0036A16C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE688D821DCC51A00036A16C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "/Users/zhangxinhua/Desktop/newWork/myMove/Pods/../build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<absolute>"; };
+		DE688D881DCC5F560036A16C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TVideoRoom-ffyesgenqxlaywcaiqshkrwldxbb/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework"; sourceTree = "<group>"; };
+		DE688D8A1DCC5F720036A16C /* Pods_TAmf3Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_TAmf3Socket.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TVideoRoom-ffyesgenqxlaywcaiqshkrwldxbb/Build/Products/Debug-iphoneos/Pods_TAmf3Socket.framework"; sourceTree = "<group>"; };
+		DE688D8C1DCC60320036A16C /* TRtmpPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TRtmpPlay.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TVideoRoom-ffyesgenqxlaywcaiqshkrwldxbb/Build/Products/Debug-iphoneos/TRtmpPlay.framework"; sourceTree = "<group>"; };
 		DE696AF31D2CBC1F007F69F7 /* libFlurry_7.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.6.4.a; path = ../libs/libFlurry_7.6.4.a; sourceTree = "<group>"; };
 		DE696AF71D2CE820007F69F7 /* libFlurryWatch_7.6.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurryWatch_7.6.4.a; path = ../libs/libFlurryWatch_7.6.4.a; sourceTree = "<group>"; };
 		DE696B121D2E3B66007F69F7 /* AlertViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewUtils.swift; sourceTree = "<group>"; };
@@ -404,9 +415,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DECBFB201DB4F15200B19A8B /* BBSZLib.framework in Frameworks */,
-				DECBFB211DB4F15200B19A8B /* CocoaAsyncSocket.framework in Frameworks */,
-				DECBFB181DB4E15F00B19A8B /* TRtmpPlay.framework in Frameworks */,
+				DE688D8D1DCC60320036A16C /* TRtmpPlay.framework in Frameworks */,
+				DE688D8B1DCC5F720036A16C /* Pods_TAmf3Socket.framework in Frameworks */,
+				DE688D891DCC5F560036A16C /* CocoaAsyncSocket.framework in Frameworks */,
 				DEBC692B1DB26FD400258004 /* Pods_TVideoRoom.framework in Frameworks */,
 				DEE870D91D579A3D004103F5 /* libFlurry_7.6.6.a in Frameworks */,
 				DECECCBD1D2B606C0030939E /* libsqlite3.tbd in Frameworks */,
@@ -961,6 +972,17 @@
 		F10C0C13BDD90EA4BB0D6ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE688D8C1DCC60320036A16C /* TRtmpPlay.framework */,
+				DE688D8A1DCC5F720036A16C /* Pods_TAmf3Socket.framework */,
+				DE688D881DCC5F560036A16C /* CocoaAsyncSocket.framework */,
+				DE688D821DCC51A00036A16C /* SwiftyJSON.framework */,
+				DE688D791DCC22DD0036A16C /* Alamofire.framework */,
+				DE688D6E1DCC22560036A16C /* Alamofire.framework */,
+				DE688D6B1DCC21F60036A16C /* SwiftyJSON.framework */,
+				DE688D681DCC21F60036A16C /* CryptoSwift.framework */,
+				DE688D651DCC21F60036A16C /* CocoaAsyncSocket.framework */,
+				DE688D621DCC21F60036A16C /* BBSZLib.framework */,
+				DE688D5F1DCC21F60036A16C /* Alamofire.framework */,
 				DECBFB1E1DB4F15200B19A8B /* BBSZLib.framework */,
 				DECBFB1F1DB4F15200B19A8B /* CocoaAsyncSocket.framework */,
 				DECBFB1B1DB4EEA300B19A8B /* Pods_TAmf3Socket.framework */,
@@ -1069,7 +1091,7 @@
 				6DC4DB5F94FF043F3CE45998 /* [CP] Embed Pods Frameworks */,
 				7BB65991FC5302439623D2F9 /* [CP] Copy Pods Resources */,
 				DE05D44A1D2BAB300015FE5A /* Run Script */,
-				DECBFB551DB4FB3E00B19A8B /* Embed Frameworks */,
+				DE688D811DCC28140036A16C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1451,7 +1473,7 @@
 					../FFmpeg,
 				);
 				INFOPLIST_FILE = TVideoRoom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = ../libs;
 				OTHER_LDFLAGS = (
@@ -1504,7 +1526,7 @@
 					../FFmpeg,
 				);
 				INFOPLIST_FILE = TVideoRoom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = ../libs;
 				ONLY_ACTIVE_ARCH = YES;

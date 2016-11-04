@@ -9,7 +9,6 @@ import SnapKit
 class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 
 	fileprivate var uiVideoControl: UIVideoPlayControl?;
-
 	var menuBar: RoomMenuBar?;
 	private var ges: UITapGestureRecognizer?;
 	var roomId: Int = 0;
@@ -28,7 +27,6 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 	var giftEffectView: GiftEffectVC?;
 
 	lazy var backBtn: UIButton = {
-
 		// 设置返回按钮属性
 		let backBtn2 = UIButton(type: UIButtonType.custom)
 		backBtn2.setImage(UIImage(named: r_nav_btnBack_9x16), for: UIControlState());
@@ -57,14 +55,12 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 		// 去掉滚动条
 		scrollView!.showsVerticalScrollIndicator = false
 		scrollView!.showsHorizontalScrollIndicator = false
-		// 去掉滚动条
 		// 设置分页
 		scrollView!.isPagingEnabled = true
 		// 设置代理
 		scrollView!.delegate = self
 		// 去掉弹簧效果
 		scrollView!.bounces = false
-
 		uiVideoControl = UIVideoPlayControl();
 		self.addChildViewController(uiVideoControl!);
 		menuBar = RoomMenuBar(frame: CGRect(x: 0, y: 0, width: self.view.width, height: 30));
@@ -126,6 +122,8 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 		NotificationCenter.default.removeObserver(self);
 		uiVideoControl?.view.removeGestureRecognizer(ges!);
 		uiVideoControl = nil;
+		giftControl = nil;
+		rankViewControl = nil;
 	}
 
 // 隐藏状态栏

@@ -1,10 +1,5 @@
 //
 //  UIVideoPlayControl.swift
-//  TVideoRoom
-//
-//  Created by  on 16/10/7.
-//  Copyright © 2016年 . All rights reserved.
-//
 
 import UIKit
 import TRtmpPlay
@@ -17,11 +12,14 @@ class UIVideoPlayControl: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad();
 		addNSNotification();
-		initView();
 		self.view.backgroundColor = UIColor.black.withAlphaComponent(0.9);
 	}
 
 	deinit {
+		NotificationCenter.default.removeObserver(self);
+	}
+
+	override func viewDidDisappear(_ animated: Bool) {
 		NotificationCenter.default.removeObserver(self);
 		vc?.close();
 		vc = nil;
@@ -29,10 +27,6 @@ class UIVideoPlayControl: UIViewController {
 
 	func addNSNotification() {
 		NotificationCenter.default.addObserver(self, selector: #selector(self.rtmpStartPlay), name: NSNotification.Name(rawValue: RTMP_START_PLAY), object: nil);
-	}
-
-	func initView() {
-
 	}
 
 	// 测试rtmp 播放
@@ -58,14 +52,11 @@ class UIVideoPlayControl: UIViewController {
 			var parametersD = [AnyHashable: Any]();
 			parametersD[KxMovieParameterMinBufferedDuration] = 2;
 			parametersD[KxMovieParameterMaxBufferedDuration] = 10;
-			// KxMovieViewController.movieViewController(withContentPath: <#T##String!#>, parameters: [AnyHashable: Any]!)
 			vc = KxMovieViewController.movieViewController(withContentPath: lastRtmpUrl, parameters: parametersD) as! KxMovieViewController?;
 			vc!.view.frame = CGRect(x: 0, y: 0, width: self.view.width, height: self.view.height);
 			self.view.addSubview(vc!.view);
 			self.addChildViewController(vc!);
 			self.view.bringSubview(toFront: vc!.view);
-			// self.view.bringSubviewToFront(backBtn);
-			// vc!.view.addGestureRecognizer(ges!);
 		}
 		else {
 			showSimplpAlertView(self, tl: "主播已停止直播", msg: "请选择其他房间试试！", btnHiht: "了解");

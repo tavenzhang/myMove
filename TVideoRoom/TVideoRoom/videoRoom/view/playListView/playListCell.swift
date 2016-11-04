@@ -59,7 +59,10 @@ class playListCell: UITableViewCell {
 
 	var dataModel: playInfoModel? {
 		didSet {
-			vipImageView.image = UIImage(named: lvIcoNameGet((dataModel?.icon?.int32Value)!, type: .vipIcoLv))
+			if ((dataModel?.icon) != nil) {
+				vipImageView.image = UIImage(named: lvIcoNameGet((dataModel?.icon?.int32Value)!, type: .vipIcoLv))
+
+			}
 
 			// lvImageView.image = UIImage(named: lvIcoNameGet((dataModel?.icon?.intValue)!, type: .VipIcoLv))
 			if (dataModel?.ruled?.int32Value == 3)

@@ -63,6 +63,11 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 		setup();
 	}
 
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated);
+
+	}
+
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}

@@ -219,6 +219,7 @@ class SocketManager {
 								if (dataCenterM.roomData.lastRtmpUrl == "") {
 									DispatchQueue.main.async {
 										let rtmpUrl = dataCenterM.roomData.rtmpList[0].isHttp ? dataCenterM.roomData.rtmpList[0].httpUrl: dataCenterM.roomData.rtmpList[0].rtmpUrl;
+										dataCenterM.roomData.lastRtmpUrl = rtmpUrl;
 										let msg2001 = s_msg_20001(cmd: MSG_20001, rtmpStr: rtmpUrl);
 										self.socketM!.sendMessage(msg2001);
 									}
