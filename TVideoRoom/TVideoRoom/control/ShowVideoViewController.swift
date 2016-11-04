@@ -147,10 +147,6 @@ extension ShowVideoViewController: UICollectionViewDelegate, UICollectionViewDat
 		var itemAcive: Activity;
 		itemAcive = dataActives[(indexPath as NSIndexPath).row];
 		let roomId = itemAcive.uid as! Int;
-//		let roomview: VideoRoomUIViewVC = VideoRoomUIViewVC();
-//		roomview.roomId = roomId;
-//		self.navigationController?.pushViewController(roomview, animated: true);
-//		Flurry.logEvent("enter videoRoom", withParameters: ["roomId": roomId], timed: false);
 		DataCenterModel.enterVideoRoom(rid: roomId, vc: self.navigationController!)
 
 	}

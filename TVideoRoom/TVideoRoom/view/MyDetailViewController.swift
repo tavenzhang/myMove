@@ -37,7 +37,6 @@ class MyDetailViewController: BaseUIViewController, UITableViewDelegate, UITable
 		infoView = LoginView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 240));
 		infoView?.parentViewVC = self;
 		navigationItem.title = "个人信息";
-		// self.view.addSubview(infoView!);
 		self.view.addSubview(tableView);
 		tableView.tableHeaderView = infoView;
 		tableView.dataSource = self;

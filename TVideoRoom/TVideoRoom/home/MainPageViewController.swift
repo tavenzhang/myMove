@@ -54,6 +54,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 		self.addChildViewController(careVC!);
 		view.addSubview(careVC!.view);
 		self.scrollView = view;
+		Flurry.logEvent("enter home");
 	}
 
 	override func viewDidLoad() {
@@ -115,6 +116,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 	}
 
 	func requesHttpData(_ isShowHint: Bool) {
+
 		let queue = DispatchQueue.global(qos: .default);
 		queue.async {
 			let hintStr = (isShowHint || !self.isFirstLoad) ? "房间数据获取中" : "";

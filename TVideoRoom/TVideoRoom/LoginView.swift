@@ -220,6 +220,7 @@ class LoginView: UIView {
 								as! NSDictionary, cls: LoginModel.classForCoder()) as! LoginModel;
 							self?.defaultInfo = result.info!;
 							self?.updateMyInfo((self?.defaultInfo)!);
+							Flurry.logEvent("login", withParameters: ["name": (self?.defaultInfo)!.nickname!, "id": (self?.defaultInfo)!.uid]);
 							let imageUrl = NSString(format: HTTP_SMALL_IMAGE as NSString, (self?.defaultInfo.headimg!)!) as String;
 							self?.imgHeadView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
 							// 设置关注数据

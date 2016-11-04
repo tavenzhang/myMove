@@ -44,7 +44,6 @@ func deserilObjectsWithArray(_ array: NSArray, cls: AnyClass) -> NSArray?
 	return arr
 }
 
-
 //数据管理中心
 class DataCenterModel {
 
@@ -67,17 +66,16 @@ class DataCenterModel {
 			roomview.roomId = rid;
 			DataCenterModel.sharedInstance.roomData.roomId = rid;
 			vc?.pushViewController(roomview, animated: true);
-
 		}
 		else {
-            showAlertHandle(vc!, tl: "您当前是游客", cont: "无法参与送礼和聊天，你确定以游客身份进入吗", okHint: "登陆", cancelHint: "进入", canlHandle: {
-                let roomview: VideoRoomUIViewVC = VideoRoomUIViewVC();
-                DataCenterModel.sharedInstance.roomData.roomId = rid;
-                roomview.roomId = rid;
-                vc?.pushViewController(roomview, animated: true);
-                }, okHandle: {
-                    NotificationCenter.default.post(name: Notification.Name(rawValue: SHOW_LOGOM_VIEW), object: nil);
-            })
+			showAlertHandle(vc!, tl: "您当前是游客", cont: "无法参与送礼和聊天，你确定以游客身份进入吗", okHint: "登陆", cancelHint: "进入", canlHandle: {
+				let roomview: VideoRoomUIViewVC = VideoRoomUIViewVC();
+				DataCenterModel.sharedInstance.roomData.roomId = rid;
+				roomview.roomId = rid;
+				vc?.pushViewController(roomview, animated: true);
+				}, okHandle: {
+				NotificationCenter.default.post(name: Notification.Name(rawValue: SHOW_LOGOM_VIEW), object: nil);
+			})
 		}
 	}
 

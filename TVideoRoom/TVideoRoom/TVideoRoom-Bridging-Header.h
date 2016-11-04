@@ -10,7 +10,4 @@
 #import "UIImage+ALinExtension.h"
 #import "GiftInfoModel.h"
 #import "GiftSendBar.h"
-//#import "ALinNetworkTool.h"
-//#import "Masonry/Masonry.h"
 #import "UIViewController+SLExtension.h"
-//#import "NSObject+ALinHUD.h"

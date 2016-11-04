@@ -14,16 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
 		Fabric.with([Crashlytics.self])
-		Flurry.startSession("G5RPTXT453GYG8DK5BSD");
+		Flurry.startSession("WFCPF3QCTFGDXWQ9QFRJ");
 		window = UIWindow(frame: ScreenBounds)
 		window!.makeKeyAndVisible();
-		LoggerStart(LoggerGetDefaultLogger())
-		LogMarker("strart");
+		#if DEBUG
+			LoggerStart(LoggerGetDefaultLogger())
+			LogMarker("strart");
+		#endif
+
 		let manVc = MainTabBarController();
 		manVc.adImage = UIImage(named: "LaunchImage");
-		// let manVc = TChatViewControl();
 		window?.rootViewController = manVc;
 		let webView = UIWebView(frame: ScreenBounds);
 		let agent = webView.stringByEvaluatingJavaScript(from: "navigator.userAgent");

@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/NSLoggerSupport.swift"
-            timestampString = "499852574.583527"
+            timestampString = "499952926.547593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "substring(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/NSLoggerSupport.swift"
-            timestampString = "499852574.583527"
+            timestampString = "499952926.547593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "substring(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/NSLoggerSupport.swift"
-            timestampString = "499852574.583527"
+            timestampString = "499952926.547593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "substring(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -719,8 +719,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "socketlog(_:)"
-            landmarkType = "7">
+            landmarkName = "SocketManager"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -833,6 +833,38 @@
             endingLineNumber = "18"
             landmarkName = "appendShort(_:isBigEndian:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in TAmf3Socket):__ObjC.NSMutableData.appendShort (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.533078"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc (extension in TAmf3Socket):__ObjC.NSMutableData.appendShort (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.53482"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -849,6 +881,38 @@
             endingLineNumber = "19"
             landmarkName = "appendShort(_:isBigEndian:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in TAmf3Socket):__ObjC.NSMutableData.appendShort (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.53863"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc (extension in TAmf3Socket):__ObjC.NSMutableData.appendShort (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.540554"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -865,6 +929,38 @@
             endingLineNumber = "17"
             landmarkName = "appendShort(_:isBigEndian:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in TAmf3Socket):__ObjC.NSMutableData.appendShort (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.5444"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc (extension in TAmf3Socket):__ObjC.NSMutableData.appendShort (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.546226"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -897,6 +993,38 @@
             endingLineNumber = "32"
             landmarkName = "appendUInt64(_:isBigEndian:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in TAmf3Socket):__ObjC.NSMutableData.appendUInt64 (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.54877"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc (extension in TAmf3Socket):__ObjC.NSMutableData.appendUInt64 (Swift.Int, isBigEndian : Swift.Bool) -&gt; ()"
+                  moduleName = "TAmf3Socket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TNetServer/common/extension/NSMudatableDataExtension.swift"
+                  timestampString = "499960774.549975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1653,22 +1781,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/control/ShowVideoViewController.swift"
-            timestampString = "498364967.354269"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/LoginView.swift"
             timestampString = "498366206.660909"
             startingColumnNumber = "9223372036854775807"
@@ -1795,22 +1907,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/MainTabBarController.swift"
-            timestampString = "498724276.988909"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/videoRoom/control/GiftViewControl.swift"
             timestampString = "498627520.393524"
             startingColumnNumber = "9223372036854775807"
@@ -1892,11 +1988,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
+            timestampString = "499958526.787979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "loadDataEvent(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1962,102 +2058,6 @@
             startingLineNumber = "207"
             endingLineNumber = "207"
             landmarkName = "validLogin(_:pwd:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/LoginView.swift"
-            timestampString = "498556287.43512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
-            landmarkName = "encodeStr(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TVideoRoom.LoginView.encodeStr (Swift.String) -&gt; Swift.String"
-                  moduleName = "TVideoRoom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinhua/Desktop/video/webWork/tvideo/TVideoRoom/TVideoRoom/LoginView.swift"
-                  timestampString = "498544702.761141"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "271"
-                  endingLineNumber = "271"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TVideoRoom.LoginView.(encodeStr (Swift.String) -&gt; Swift.String).(closure #1)"
-                  moduleName = "TVideoRoom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinhua/Desktop/video/webWork/tvideo/TVideoRoom/TVideoRoom/LoginView.swift"
-                  timestampString = "498544702.764342"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "271"
-                  endingLineNumber = "271"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/LoginView.swift"
-            timestampString = "498556287.43512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "encodeStr(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/LoginView.swift"
-            timestampString = "498556287.43512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
-            landmarkName = "encodeStr(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/LoginView.swift"
-            timestampString = "498556287.43512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "encodeStr(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2196,11 +2196,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
+            timestampString = "499958526.787979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "requesHttpData(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2212,27 +2212,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "requesHttpData(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
+            timestampString = "499958526.787979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
             endingLineNumber = "122"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "requesHttpData(_:)"
             landmarkType = "7">
             <Locations>
@@ -2240,61 +2240,61 @@
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1)"
+                  symbolName = "function signature specialization &lt;Arg[1] = Owned To Guaranteed&gt; of TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1)"
                   moduleName = "TVideoRoom"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinhua/Desktop/video/webWork/tvideo/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-                  timestampString = "498550991.941081"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+                  timestampString = "499960774.554989"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "332">
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "224">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1)"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed&gt; of TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1)"
                   moduleName = "TVideoRoom"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinhua/Desktop/video/webWork/tvideo/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-                  timestampString = "498550991.94548"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+                  timestampString = "499960774.556369"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Dead, Arg[1] = Owned To Guaranteed&gt; of TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "TVideoRoom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+                  timestampString = "499960774.558157"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed&gt; of TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1).(closure #6)"
                   moduleName = "TVideoRoom"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinhua/Desktop/video/webWork/tvideo/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-                  timestampString = "498550991.94734"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+                  timestampString = "499960774.559532"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1).(closure #6)"
-                  moduleName = "TVideoRoom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangxinhua/Desktop/video/webWork/tvideo/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-                  timestampString = "498550991.948836"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2370,11 +2370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
+            timestampString = "499958526.787979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "rankCrown()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2386,11 +2386,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
+            timestampString = "499958526.787979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "rankCrown()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2434,11 +2434,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
-            timestampString = "499934839.127264"
+            timestampString = "499958526.787979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "requesHttpData(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3046,6 +3046,214 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "appToB2FRUN(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = [Constant Propagated Function : TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1).(closure #2)]&gt; of reabstraction thunk helper from @callee_owned (@owned TVideoRoom.Activity, @owned TVideoRoom.Activity) -&gt; (@unowned Swift.Bool) to @callee_owned (@in TVideoRoom.Activity, @in TVideoRoom.Activity) -&gt; (@unowned Swift.Bool)"
+                  moduleName = "TVideoRoom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+                  timestampString = "499952245.447696"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed, Arg[1] = Owned To Guaranteed&gt; of TVideoRoom.MainPageViewController.(requesHttpData (Swift.Bool) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "TVideoRoom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+                  timestampString = "499952245.449008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "2124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/home/MainPageViewController.swift"
+            timestampString = "499958526.787979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "requesHttpData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/VideoListController.swift"
+            timestampString = "499960749.820244"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TVideoRoom.VideoListViewController.viewDidAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "TVideoRoom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/VideoListController.swift"
+                  timestampString = "499960774.572448"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc TVideoRoom.VideoListViewController.viewDidAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "TVideoRoom"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangxinhua/Desktop/newWork/myMove/TVideoRoom/TVideoRoom/VideoListController.swift"
+                  timestampString = "499960774.573768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/view/VideoRoomUIViewControl.swift"
+            timestampString = "499960762.513629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TVideoRoom/TVideoRoom/LoginView.swift"
+            timestampString = "499961107.191934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "validLogin(_:pwd:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

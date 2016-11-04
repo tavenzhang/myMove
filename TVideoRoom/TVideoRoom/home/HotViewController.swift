@@ -57,7 +57,6 @@ class HotViewController: BaseUIViewController {
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated);
-		Flurry.logEvent("enter home");
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -84,7 +83,6 @@ class HotViewController: BaseUIViewController {
 		testData.append(data2);
 		testData.append(data3);
 		adList = testData;
-		// headRefresh();
 	}
 
 	/**
@@ -211,9 +209,5 @@ extension HotViewController: UICollectionViewDelegate, UICollectionViewDataSourc
 		itemAcive = (hotList?[(indexPath as NSIndexPath).row])!;
 		let roomId = itemAcive.uid as! Int;
 		DataCenterModel.enterVideoRoom(rid: roomId, vc: self.navigationController!)
-//		let roomview = VideoRoomUIViewVC();
-//		roomview.roomId = roomId;
-//		self.navigationController?.pushViewController(roomview, animated: true);
-//		Flurry.logEvent("enter videoRoom", withParameters: ["roomId": roomId], timed: false);
 	}
 }

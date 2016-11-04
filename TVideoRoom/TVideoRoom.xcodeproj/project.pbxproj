@@ -70,6 +70,7 @@
 		DE7DAF571DA3795400AB51FC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7DAF551DA3795400AB51FC /* Reachability.m */; };
 		DE7DAF5B1DA3810100AB51FC /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DAF5A1DA3810100AB51FC /* MenuBar.swift */; };
 		DE7EC1F71DB36EDF000F051F /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7EC1F61DB36EDF000F051F /* EditTableViewCell.swift */; };
+		DE90D9761DCCC2C200E7BA8E /* libFlurry_7.8.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE90D9751DCCC2C200E7BA8E /* libFlurry_7.8.1.a */; };
 		DE9655A01DA6264400095146 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96559F1DA6264400095146 /* LoginView.swift */; };
 		DE9D50E91DA637850029C06E /* MyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D50E81DA637850029C06E /* MyInfo.swift */; };
 		DEA01EC41DA5DAE60075411D /* ResourceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA01EC31DA5DAE60075411D /* ResourceString.swift */; };
@@ -146,7 +147,6 @@
 		DEE0F0E91DA77D3300BE806B /* UIVideoPlayerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0F0E81DA77D3300BE806B /* UIVideoPlayerControl.swift */; };
 		DEE0F0EB1DA7985700BE806B /* TabBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0F0EA1DA7985700BE806B /* TabBarMenu.swift */; };
 		DEE647A91DA7EF530096201A /* GiftViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE647A81DA7EF530096201A /* GiftViewControl.swift */; };
-		DEE870D91D579A3D004103F5 /* libFlurry_7.6.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE870D81D579A3D004103F5 /* libFlurry_7.6.6.a */; };
 		DEF400B91D1D55770093A883 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF400B81D1D55770093A883 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
@@ -267,6 +267,7 @@
 		DE7EC2001DB38BD4000F051F /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7EC2031DB38BD4000F051F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7EC2061DB38BD4000F051F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE90D9751DCCC2C200E7BA8E /* libFlurry_7.8.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurry_7.8.1.a; path = ../libs/libFlurry_7.8.1.a; sourceTree = "<group>"; };
 		DE96559F1DA6264400095146 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DE9937861DB268EF00D0B326 /* TAmf3Socket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TAmf3Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE99378A1DB268FD00D0B326 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,11 +416,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE90D9761DCCC2C200E7BA8E /* libFlurry_7.8.1.a in Frameworks */,
 				DE688D8D1DCC60320036A16C /* TRtmpPlay.framework in Frameworks */,
 				DE688D8B1DCC5F720036A16C /* Pods_TAmf3Socket.framework in Frameworks */,
 				DE688D891DCC5F560036A16C /* CocoaAsyncSocket.framework in Frameworks */,
 				DEBC692B1DB26FD400258004 /* Pods_TVideoRoom.framework in Frameworks */,
-				DEE870D91D579A3D004103F5 /* libFlurry_7.6.6.a in Frameworks */,
 				DECECCBD1D2B606C0030939E /* libsqlite3.tbd in Frameworks */,
 				DEBE43B01D1EF24100178DA7 /* UIKit.framework in Frameworks */,
 				DEF400B91D1D55770093A883 /* Accelerate.framework in Frameworks */,
@@ -972,6 +973,7 @@
 		F10C0C13BDD90EA4BB0D6ED7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE90D9751DCCC2C200E7BA8E /* libFlurry_7.8.1.a */,
 				DE688D8C1DCC60320036A16C /* TRtmpPlay.framework */,
 				DE688D8A1DCC5F720036A16C /* Pods_TAmf3Socket.framework */,
 				DE688D881DCC5F560036A16C /* CocoaAsyncSocket.framework */,

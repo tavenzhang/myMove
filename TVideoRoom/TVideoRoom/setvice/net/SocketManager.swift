@@ -28,7 +28,6 @@ class SocketManager {
 		for item in ipList {
 			DispatchQueue.global().async {
 				var as3Socket: Amf3SocketManager? = Amf3SocketManager(heartTime: 10, msgHeadSize: 2, isByteBigEndian: true);
-				// as3Socket?.onTLogHandle = self.socketlog;
 				let ip = item.components(separatedBy: ":")[0];
 				let port = Int(item.components(separatedBy: ":")[1]);
 				LogSocket("test ip=\(ip)---port--\(port!)---start");
