@@ -79,3 +79,9 @@ let LOGIN_ERROR_SOCET: String = "LOGIN_ERROR_SOCET";
 
 // 切换到登陆界面
 let SHOW_LOGOM_VIEW: String = "SHOW_LOGOM_VIEW";
+
+// 前台进入后台
+let ENTER_F2B_RUN: String = "ENTER_F2B_RUN";
+
+// 后台进入前台
+let ENTER_B2F_RUN: String = "ENTER_B2F_RUN";

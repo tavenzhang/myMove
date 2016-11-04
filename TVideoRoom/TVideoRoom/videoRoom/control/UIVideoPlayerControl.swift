@@ -6,7 +6,7 @@ import TRtmpPlay
 
 class UIVideoPlayControl: UIViewController {
 
-	fileprivate var vc: KxMovieViewController?;
+	var vc: KxMovieViewController?;
 	var lastRtmpUrl: String = "";
 
 	override func viewDidLoad() {
@@ -27,6 +27,18 @@ class UIVideoPlayControl: UIViewController {
 
 	func addNSNotification() {
 		NotificationCenter.default.addObserver(self, selector: #selector(self.rtmpStartPlay), name: NSNotification.Name(rawValue: RTMP_START_PLAY), object: nil);
+		NotificationCenter.default.addObserver(self, selector: #selector(self.appToF2BRUN), name: NSNotification.Name(rawValue: ENTER_F2B_RUN), object: nil);
+		NotificationCenter.default.addObserver(self, selector: #selector(self.appToB2FRUN), name: NSNotification.Name(rawValue: ENTER_B2F_RUN), object: nil);
+	}
+
+	func appToF2BRUN(_ notification: Notification) {
+		LogHttp("appToF2BRUN----vc=\(vc)")
+		vc?.pause()
+	}
+
+	func appToB2FRUN(_ notification: Notification) {
+		LogHttp("appToB2FRUN----vc=\(vc)")
+		vc?.play();
 	}
 
 	// 测试rtmp 播放
