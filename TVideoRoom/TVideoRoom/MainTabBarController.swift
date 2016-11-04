@@ -69,8 +69,10 @@ class MainTabBarController: UITabBarController {
 	fileprivate func tabBarControllerAddChildViewController(_ childVC: UIViewController, title: String, imageName: String, selectedImageName: String, tag: Int) {
 		let vcItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
 		vcItem.tag = tag
+
 		// vcItem.animation = RAMBounceAnimation()
 		childVC.tabBarItem = vcItem
+		self.view.tintColor = UIColor.colorWithCustom(217, g: 44, b: 114);
 
 		let navigationVC = BaseNavigationController(rootViewController: childVC)
 		addChildViewController(navigationVC)

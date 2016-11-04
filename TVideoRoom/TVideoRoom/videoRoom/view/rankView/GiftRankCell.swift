@@ -43,7 +43,7 @@ class RankGiftCell: UITableViewCell {
 	}
 
 	lazy var txtRank: UILabel = {
-		var lb = self.createLB("1", corlor: UIColor.blue);
+		var lb = self.createLB("1", corlor: UIColor.colorWithCustom(221, g: 44, b: 144));
 		self.contentView.addSubview(lb);
 		return lb;
 	}()

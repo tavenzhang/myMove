@@ -41,9 +41,6 @@ class YYFaceView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	// The output below is limited by 1 KB.
-	// Please Sign Up (Free!) to remove this limitation.
-
 	/**
      * 行 row:3
      * 列 colum:7
@@ -205,8 +202,6 @@ class YYFaceView: UIView {
 	}
 }
 
-
-
 class YYFaceScrollView: UIView, UIScrollViewDelegate {
 	var scrollView: UIScrollView!
 	var faceView: YYFaceView!
@@ -224,7 +219,6 @@ class YYFaceScrollView: UIView, UIScrollViewDelegate {
 	convenience init(selectBlock block: @escaping SelectBlock) {
 		self.init(frame: CGRect.zero)
 		faceView.block = block
-
 	}
 
 	required init?(coder aDecoder: NSCoder) {

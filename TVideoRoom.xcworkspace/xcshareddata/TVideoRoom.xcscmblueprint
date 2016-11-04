@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "887D1C27B5D4C334F74A13F11D69C898032E5F62",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "887D1C27B5D4C334F74A13F11D69C898032E5F62" : 9223372036854775807,
+    "EC41DDF2366F410C85E5CBB3AB114AFEC2A4EC15" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "045095F7-26F8-41B5-A1B1-1D9025E914D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "887D1C27B5D4C334F74A13F11D69C898032E5F62" : "myMove\/",
+    "EC41DDF2366F410C85E5CBB3AB114AFEC2A4EC15" : "..\/video\/webWork\/tvideo"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TVideoRoom",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TVideoRoom.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tavenzhang\/myMove.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "887D1C27B5D4C334F74A13F11D69C898032E5F62"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tavenzhang\/tvideo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EC41DDF2366F410C85E5CBB3AB114AFEC2A4EC15"
+    }
+  ]
+}

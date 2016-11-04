@@ -35,7 +35,7 @@ class ChatCell: UITableViewCell {
 		self.nameLable = UILabel()
 		self.nameLable!.frame = CGRect(x: kPadding, y: kPadding, width: ScreenWidth, height: 20)
 		self.nameLable!.font = UIFont.systemFont(ofSize: kContentFontSize)
-		self.nameLable!.textColor = UIColor.purple
+		self.nameLable!.textColor = UIColor.colorWithCustom(255, g: 147, b: 160);
 		self.contentView.addSubview(nameLable!);
 		// nameLable ＝ [UILabel alloc]int;
 		// 初始化正文视图
@@ -112,7 +112,9 @@ class ChatCell: UITableViewCell {
 		// NSMutableAttributedString *attrStr = [Utility emotionStrWithString:_message.content];
 		let attrStr = Utility.emotionStr(with: message!.content, faceDataList: FaceData.faceDataList, y: -3);
 		attrStr.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: kContentFontSize), range: NSMakeRange(0, attrStr.length))
+		attrStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.colorWithCustom(100, g: 100, b: 100), range: NSMakeRange(0, attrStr.length));
 		let textSize = attrStr.boundingRect(with: CGSize(width: textMaxWidth, height: 9999999), options: .usesLineFragmentOrigin, context: nil).size
+
 		self.contentLabel!.attributedText = attrStr
 		self.contentLabel!.frame = CGRect(x: 0, y: 0, width: textSize.width, height: textSize.height);
 		self.contentLabel!.top = self.nameLable!.bottom ;

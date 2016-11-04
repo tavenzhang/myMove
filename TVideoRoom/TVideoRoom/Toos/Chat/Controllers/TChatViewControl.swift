@@ -5,8 +5,6 @@
 import UIKit;
 import SnapKit;
 
-
-
 enum KeyBoardType: Int {
 	case txtBoard
 	case faceBoard
@@ -57,7 +55,7 @@ class TChatViewControl: UIViewController, UITextFieldDelegate {
 		self.bottomView = UIView();
 		self.view.addSubview(bottomView!);
 		self.bottomView!.layer.borderWidth = 1;
-		self.bottomView!.layer.borderColor = UIColor.gray.cgColor;
+		self.bottomView!.layer.borderColor = UIColor.colorWithCustom(200, g: 200, b: 200, a: 0.4).cgColor;
 		bottomView?.snp.makeConstraints { (make) in
 			make.height.equalTo(45);
 			make.bottom.equalTo(self.view.snp.bottom);
@@ -92,7 +90,7 @@ class TChatViewControl: UIViewController, UITextFieldDelegate {
 		self.textField?.placeholder = " 在这里互动吧！"
 		self.textField?.layer.cornerRadius = 5;
 		self.textField?.layer.borderWidth = 1;
-		self.textField?.layer.borderColor = UIColor.gray.cgColor;
+		self.textField?.layer.borderColor = UIColor.colorWithCustom(150, g: 150, b: 150, a: 0.2).cgColor;
 		self.textField?.layer.masksToBounds = true;
 
 		self.bottomView!.addSubview(faceTield);
@@ -114,10 +112,10 @@ class TChatViewControl: UIViewController, UITextFieldDelegate {
 		// self.btnGift?.imageView?.contentMode = .;
 		self.btnGift?.scale(2, ySclae: 2);
 		self.bottomView!.addSubview(btnGift!);
-		//self.bottomView!.backgroundColor = UIColor.brown;
+		// self.bottomView!.backgroundColor = UIColor.brown;
 		self.btnGift?.snp.makeConstraints({ (make) in
-			make.width.height.equalTo(40);
-			make.left.equalTo((self.textField?.snp.right)!).offset(10);
+			make.width.height.equalTo(30);
+			make.left.equalTo((self.textField?.snp.right)!).offset(18);
 			make.centerY.equalTo(self.bottomView!);
 		})
 

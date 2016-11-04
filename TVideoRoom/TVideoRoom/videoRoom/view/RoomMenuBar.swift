@@ -35,22 +35,22 @@ class RoomMenuBar: UIView {
 	func setup() {
 
 		menuBar = TabBarMenu();
-		let changeLineBtn = self.createBtn("换线", tag: 3, size: 17, color: UIColor.purple);
+		let changeLineBtn = self.createBtn("换线", tag: 3, size: 16, color: UIColor.brown);
 		self.addSubview(changeLineBtn);
 		self.addSubview(menuBar!);
-		menuBar?.snp_makeConstraints { (make) in
+		menuBar?.snp.makeConstraints { (make) in
 			make.width.equalTo(self.width * 3 / 4);
 			make.height.equalTo(self);
-			make.top.equalTo(self);
+			make.top.equalTo(self).offset(-4);
 			make.left.equalTo(self);
 		}
 		// 强制更新一次
 		self.layoutIfNeeded();
-		menuBar?.creatBtnByList(["聊天", "贡献榜", "在线"], txtSize: 16, color: UIColor.brown);
+		menuBar?.creatBtnByList(["聊天", "贡献榜", "在线"], txtSize: 15, color: UIColor.brown);
 		menuBar!.regClickHandle(tabBtnClikc);
-		changeLineBtn.snp_makeConstraints { (make) in
+		changeLineBtn.snp.makeConstraints { (make) in
 			make.centerY.equalTo(self);
-			make.right.equalTo(self.snp_right).offset(-20);
+			make.right.equalTo(self.snp.right).offset(-20);
 		};
 	}
 

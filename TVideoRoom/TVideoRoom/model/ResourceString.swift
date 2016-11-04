@@ -6,17 +6,17 @@
 import Foundation
 
 ///tab bar
-let r_tabBtn_home = "v2_home";
-let r_tabBtn_home_r = "v2_home_r";
+let r_tabBtn_home = "index";
+let r_tabBtn_home_r = "index_s";
 
-let r_tabBtn_rank = "v2_order";
-let r_tabBtn_rank_r = "v2_order_r";
+let r_tabBtn_rank = "rank";
+let r_tabBtn_rank_r = "rank_s";
 
-let r_tabBtn_active = "shopCart" ;
-let r_tabBtn_active_r = "shopCart" ;
+let r_tabBtn_active = "active" ;
+let r_tabBtn_active_r = "active_s" ;
 
-let r_btn_me = "v2_my";
-let r_btn_me_r = "v2_my_r";
+let r_btn_me = "me";
+let r_btn_me_r = "me_s";
 
 /// NavigationController bar
 let r_nav_barbg_414x70 = "navBar_bg_414x70";

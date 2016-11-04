@@ -11,7 +11,7 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 	fileprivate var uiVideoControl: UIVideoPlayControl?;
 
 	var menuBar: RoomMenuBar?;
-	 private var ges: UITapGestureRecognizer?;
+	private var ges: UITapGestureRecognizer?;
 	var roomId: Int = 0;
 	var lastRtmpUrl: String = "";
 	// 滚动ui
@@ -82,7 +82,7 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 		}
 		menuBar?.snp.makeConstraints { (make) in
 			make.width.equalTo(vWidth);
-			make.height.equalTo(30);
+			make.height.equalTo(25);
 			make.top.equalTo(uiVideoControl!.view.snp.bottom);
 		}
 		scrollView!.snp.makeConstraints { (make) in

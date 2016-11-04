@@ -3,8 +3,6 @@
 import UIKit
 import SnapKit
 
-
-
 class TabBarMenu: UIView {
 
 	// MARK: - 初始化子空间
@@ -58,7 +56,7 @@ class TabBarMenu: UIView {
 
 		}
 		underLine = UIView(frame: CGRect(x: 15.0, y: self.height - 4, width: itemSize / 2, height: 2.0));
-		underLine!.backgroundColor = UIColor.purple;
+		underLine!.backgroundColor = UIColor.colorWithCustom(221, g: 44, b: 144);
 		self.addSubview(underLine!);
 		if (btnList.count > 0)
 		{
