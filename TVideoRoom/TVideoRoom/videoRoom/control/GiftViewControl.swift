@@ -69,7 +69,7 @@ class GiftViewControl: UIViewController {
 								self!.dataRoom?.giftDataManager.append(model);
 							}
 						}
-						// LogHttp("giftDataList------\(self!.giftDataList)");
+
 					}
 				}
 				self?.buildGiftMenuBar();
@@ -219,8 +219,9 @@ class GiftViewControl: UIViewController {
 			else {
 				let msg = s_msg_40001(gid: Int((curSelectGift?.gid)!), uid: DataCenterModel.sharedInstance.roomData.roomId, gnum: curShopNum);
 				SocketManager.sharedInstance.socketM!.sendMessage(msg);
+				Flurry.logEvent("send gift", withParameters: ["gid": Int((curSelectGift?.gid)!), "num": curShopNum], timed: false);
 			}
-			LogHttp("送礼物");
+
 		}
 		else {
 			showSimplpAlertView(self, tl: "", msg: "请先选择礼物！")

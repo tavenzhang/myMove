@@ -44,6 +44,8 @@ func deserilObjectsWithArray(_ array: NSArray, cls: AnyClass) -> NSArray?
 	return arr
 }
 
+
+
 //数据管理中心
 class DataCenterModel {
 

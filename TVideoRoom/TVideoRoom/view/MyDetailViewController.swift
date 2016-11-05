@@ -32,9 +32,10 @@ class MyDetailViewController: BaseUIViewController, UITableViewDelegate, UITable
 	var itemDetalTitle = "";
 
 	override func viewDidLoad() {
+
 		super.viewDidLoad();
 		roomData = DataCenterModel.sharedInstance.roomData;
-		infoView = LoginView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 240));
+		infoView = LoginView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight / 3));
 		infoView?.parentViewVC = self;
 		navigationItem.title = "个人信息";
 		self.view.addSubview(tableView);
@@ -45,8 +46,8 @@ class MyDetailViewController: BaseUIViewController, UITableViewDelegate, UITable
 			make.edges.equalTo(self.view);
 		}
 		initData();
-
 		tableView.separatorInset = UIEdgeInsetsMake(0, 50, 0, 0);
+		tableView.rowHeight = (ScreenHeight * 2 / 3) / 10
 		flushTable();
 
 	}

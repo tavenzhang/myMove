@@ -63,7 +63,7 @@ var MyPdomain: String {
 	}
 }
 
-let HTTP_AD_IMG = "http: // %@/"
+let HTTP_AD_IMG = "http://%@/"
 //原始老接口
 let HTTP_HOST_LIST: String = "http://%@/videolist.json";
 //获取大厅
@@ -87,6 +87,10 @@ var HTTP_LOGIN = "http://%@/login";
 
 //获取礼物数据
 var HTTP_GIFT_Table = "http://%@/video_gs/conf";
+
+/**设置关注状态 0 查询 1:添加 2:取消  */
+//http://%@/focus?pid=%@&ret=%d
+var HTTP_V_FOCUS = "http://%@/focus";
 
 //获取礼物ico
 var HTTP_GIFT_ICO_URL: String {
@@ -195,7 +199,7 @@ class HttpTavenService {
 				}
 				else {
 					reulstH?.isSuccess = false;
-					LogHttp("http  recive<------not json data ==dataM:\(dataM)");
+					LogHttp("http  recive<------not json data ==dataM:\(dataM.toUtf8String())");
 				}
 			case .failure(let error):
 				LogHttp("http  recive<------Request failed with error: \(error)");

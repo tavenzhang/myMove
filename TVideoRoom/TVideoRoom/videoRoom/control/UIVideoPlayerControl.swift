@@ -66,6 +66,7 @@ class UIVideoPlayControl: UIViewController {
 			parametersD[KxMovieParameterMaxBufferedDuration] = 10;
 			vc = KxMovieViewController.movieViewController(withContentPath: lastRtmpUrl, parameters: parametersD) as! KxMovieViewController?;
 			vc!.view.frame = CGRect(x: 0, y: 0, width: self.view.width, height: self.view.height);
+			vc!.view.isUserInteractionEnabled = false;
 			self.view.addSubview(vc!.view);
 			self.addChildViewController(vc!);
 			self.view.bringSubview(toFront: vc!.view);

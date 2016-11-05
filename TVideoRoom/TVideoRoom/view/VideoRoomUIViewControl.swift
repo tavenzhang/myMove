@@ -41,7 +41,7 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 
 	override func viewDidLoad() {
 		addNSNotification();
-		Flurry.logEvent("enter videoRoom", withParameters: ["roomId": roomId], timed: false);
+		Flurry.logEvent(flurry_enter_videoRoom, withParameters: ["roomId": roomId], timed: false);
 		self.view.frame = ScreenBounds;
 		self.view.backgroundColor = UIColor.white;
 		self.navigationController?.setNavigationBarHidden(true, animated: false);

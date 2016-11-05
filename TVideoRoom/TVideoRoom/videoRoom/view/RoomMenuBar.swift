@@ -52,6 +52,19 @@ class RoomMenuBar: UIView {
 			make.centerY.equalTo(self);
 			make.right.equalTo(self.snp.right).offset(-20);
 		};
+		if (DataCenterModel.isLogin)
+		{
+			focusServe(DataCenterModel.sharedInstance.roomData.uid, type: 0);
+		}
+	}
+	// 关注按钮 ， 服务器依赖浏览器 暂时保留
+	func focusServe(_ uid: String, type: Int) {
+		// /** 设置关注状态 0 查询 1:添加 2:取消*/  ?pid={1}&ret={2}
+		// let url: String = "\(getWWWHttp(HTTP_V_FOCUS))?pid=\(DataCenterModel.sharedInstance.roomData.uid)&ret=\(type)"
+//		HttpTavenService.requestJson(url, isGet: true, para: nil) { [weak self](HttpResult) in
+//
+//		}
+
 	}
 
 	func tabBtnClikc(_ tag: Int)

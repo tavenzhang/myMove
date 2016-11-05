@@ -274,7 +274,7 @@ extension TSocketGCDServer: GCDAsyncSocketDelegate {
 
 	// socket  接受到数据后 这里是处理数据的关键
 	public func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
-		TLog("收到数据data=%d curAmfMsgLen==%d－－buffMutableData＝%d", args: data.count, curMsgBodyLength, buffMutableData!.length);
+//		TLog("收到数据data=%d curAmfMsgLen==%d－－buffMutableData＝%d", args: data.count, curMsgBodyLength, buffMutableData!.length);
 		while (buffMutableData!.length >= self.msgHeadSize)
 		{
 

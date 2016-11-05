@@ -181,7 +181,6 @@ extension UISearchViewController: UICollectionViewDelegate, UICollectionViewData
 		resultSrarchController.searchBar.resignFirstResponder();
 		resultSrarchController.searchBar.removeFromSuperview();
 		parentNVC?.pushViewController(roomview, animated: true);
-		Flurry.logEvent("enter videoRoom", withParameters: ["roomId": roomId], timed: false);
 	}
 }
 

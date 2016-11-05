@@ -243,9 +243,6 @@ class SocketManager {
 				noticeMsgMianThread(RTMP_START_PLAY, "" as AnyObject?);
 			}
 			break;
-		case MSG_500: // break
-			// var info = json["msg"].string
-			break;
 		case MSG_11002:
 			if (json["richLv"].int! >= 2)
 			{
@@ -292,7 +289,7 @@ class SocketManager {
 			noticeMsgMianThread(GIFT_EFFECT_START, giftInfo);
 		case MSG_500: // 多处登陆。
 			dataCenterM.roomData.reset();
-			showMainThreatAlert("", content: "账号登陆异常，请退出房间重新登陆!");
+			showMainThreatAlert("", content: "账号登陆异常，服务器已断开连接，请退出房间重新登陆!");
 		case MSG_15555: // 各种错误提醒
 			let msg = ErrAlertManger.instance.getDescByError(json["errorCode"].intValue);
 			showMainThreatAlert("", content: msg);

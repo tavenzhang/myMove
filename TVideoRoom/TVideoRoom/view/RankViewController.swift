@@ -37,7 +37,6 @@ class RankViewController: BaseUIViewController, UITableViewDelegate, UITableView
 		self.view.addSubview(tableView);
 		self.tableView.delegate = self;
 		self.tableView.dataSource = self;
-		self.tableView.rowHeight = self.view.width / 9;
 		self.tableView.backgroundColor = UIColor.clear;
 		self.tableView.allowsSelection = false;
 		self.tableView.isHidden = true;
@@ -69,6 +68,13 @@ class RankViewController: BaseUIViewController, UITableViewDelegate, UITableView
 			make.width.equalTo(self.view.snp.width);
 			make.top.equalTo((segmentVC?.snp.bottom)!).offset(5);
 			make.bottom.equalTo(self.view.snp.bottom);
+		}
+		self.view.layoutIfNeeded();
+		if (isPlusDevice) {
+			self.tableView.rowHeight = self.tableView.height / 13;
+		}
+		else {
+			self.tableView.rowHeight = self.tableView.height / 14;
 		}
 
 	}
@@ -107,6 +113,7 @@ class RankViewController: BaseUIViewController, UITableViewDelegate, UITableView
 			item.isHost = false;
 		}
 		self.tableView.reloadData();
+		UIView.transition(with: self.tableView, duration: 3, options: .curveEaseIn, animations: nil, completion: nil);
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int

@@ -127,3 +127,35 @@ func showLoginlert(_ uiCtrol: UIViewController?, txtName: String, pwd: String, l
 
 	return alertCtr;
 }
+
+func showLoginReg(_ uiCtrol: UIViewController?, txtName: String, pwd: String, loginHandle: block_alertLogin? = nil) -> UIAlertController {
+	let alertCtr = UIAlertController(title: "login", message: "", preferredStyle: UIAlertControllerStyle.alert);
+	alertCtr.addTextField() {
+		(textF: UITextField) in
+		textF.placeholder = "邮箱";
+		textF.text = txtName;
+	}
+	alertCtr.addTextField() {
+		(textF: UITextField) in
+		textF.placeholder = "密码";
+		textF.isSecureTextEntry = true;
+		textF.text = pwd;
+	}
+	let canelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.destructive) {
+		(action) in
+		uiCtrol?.dismiss(animated: false, completion: nil);
+
+	};
+	let okAction = UIAlertAction(title: "登陆", style: UIAlertActionStyle.cancel) {
+		(action) in
+		let name = (alertCtr.textFields![0] as UITextField).text!;
+		let pwd = (alertCtr.textFields![1] as UITextField).text!;
+		loginHandle?(name, pwd);
+		uiCtrol?.dismiss(animated: false, completion: nil);
+	};
+	alertCtr.addAction(okAction);
+	alertCtr.addAction(canelAction);
+	uiCtrol?.present(alertCtr, animated: true, completion: nil);
+
+	return alertCtr;
+}

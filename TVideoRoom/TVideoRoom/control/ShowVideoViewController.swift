@@ -98,7 +98,8 @@ extension ShowVideoViewController: UICollectionViewDelegate, UICollectionViewDat
 	// 设置item 宽
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		var itemSize = CGSize.zero;
-		itemSize = CGSize(width: (ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, height: 130)
+		let cwith = (ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4;
+		itemSize = CGSize(width: cwith, height: cwith * 3 / 4);
 		return itemSize
 	}
 

@@ -54,7 +54,6 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 		self.addChildViewController(careVC!);
 		view.addSubview(careVC!.view);
 		self.scrollView = view;
-		Flurry.logEvent("enter home");
 	}
 
 	override func viewDidLoad() {
@@ -66,6 +65,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated);
+		Flurry.logEvent(flurry_enterHome);
 
 	}
 
@@ -192,7 +192,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 		let page: CGFloat = scrollView.contentOffset.x / ScreenWidth
 		if ((self.menuBar) != nil)
 		{
-			let offsetX: CGFloat = scrollView.contentOffset.x / ScreenWidth * (self.menuBar!.width * 0.5 - Home_Seleted_Item_W * 0.5 - 15)
+            let offsetX: CGFloat = scrollView.contentOffset.x / ScreenWidth * (self.menuBar!.width * 0.5 - Home_Seleted_Item_W * 0.5 - 15);
 			self.menuBar!.underLine.x = 15 + offsetX
 			if page == 1 {
 				self.menuBar!.underLine.x = offsetX + 10

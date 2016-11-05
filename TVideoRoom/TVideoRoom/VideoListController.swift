@@ -53,8 +53,6 @@ class VideoListViewController: BaseUIViewController {
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated);
-		Flurry.logEvent("enter home");
-
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -140,12 +138,8 @@ extension VideoListViewController: UICollectionViewDelegate, UICollectionViewDat
 	// 设置item 宽
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		var itemSize = CGSize.zero
-//        if indexPath.section == 0 {
-//            itemSize = CGSizeMake(ScreenWidth - HomeCollectionViewCellMargin * 2, 140)
-//        } else if indexPath.section == 1 {
-//            itemSize = CGSizeMake((ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, 250)
-//        }
-		itemSize = CGSize(width: (ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, height: 130)
+		let cwidth = (ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4;
+		itemSize = CGSize(width: cwidth, height: cwidth * 3 / 4)
 		return itemSize
 	}
 

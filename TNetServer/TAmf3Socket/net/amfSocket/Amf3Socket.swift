@@ -26,7 +26,6 @@ open class Amf3SocketManager: TSocketGCDServer {
 		var amf3Unarchiver: AMFUnarchiver?;
 		if (objNSData!.count > 0)
 		{
-
 			amf3Unarchiver = AMFUnarchiver(forReadingWith: objNSData, encoding: kAMF3Encoding);
 			var obj: NSObject?;
 			if (amf3Unarchiver != nil)

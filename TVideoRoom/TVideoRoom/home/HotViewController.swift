@@ -171,7 +171,7 @@ extension HotViewController: UICollectionViewDelegate, UICollectionViewDataSourc
 	// 设置item 宽
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		let w = ScreenWidth;
-		let h = isPlusDevice ? (320 / ScreenWidth) * 450: (320 / ScreenWidth) * 400;
+		let h = ScreenWidth * 3 / 4 + 50 ;
 		let itemSize = CGSize(width: w, height: h);
 
 		return itemSize

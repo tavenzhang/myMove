@@ -187,12 +187,13 @@ class LoginView: UIView {
 	}
 
 	func clickReg() {
+		Flurry.logEvent(flurry_btn_reg);
 		showSimplpAlertView(parentViewVC, tl: "", msg: "注册功能暂未开放!");
-		LogHttp("clickReg");
+
 	}
 
 	func clickLogin() {
-		LogHttp("clickLogin");
+		Flurry.logEvent(flurry_btn_login);
 		var myName = UserDefaults.standard.string(forKey: default_login_name);
 		var mypwd = UserDefaults.standard.string(forKey: default_login_pwd);
 		myName = myName == nil ? "" : myName;
@@ -220,7 +221,7 @@ class LoginView: UIView {
 								as! NSDictionary, cls: LoginModel.classForCoder()) as! LoginModel;
 							self?.defaultInfo = result.info!;
 							self?.updateMyInfo((self?.defaultInfo)!);
-							Flurry.logEvent("login", withParameters: ["name": (self?.defaultInfo)!.nickname!, "id": (self?.defaultInfo)!.uid]);
+							Flurry.logEvent(flurry_login_success, withParameters: ["name": (self?.defaultInfo)!.nickname!, "id": (self?.defaultInfo)!.uid]);
 							let imageUrl = NSString(format: HTTP_SMALL_IMAGE as NSString, (self?.defaultInfo.headimg!)!) as String;
 							self?.imgHeadView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
 							// 设置关注数据
@@ -243,6 +244,7 @@ class LoginView: UIView {
 							UserDefaults.standard.synchronize();
 						}
 						else {
+							Flurry.logEvent(flurry_login_failre);
 							var _ = showSimplpAlertView(self?.parentViewVC!, tl: "个人信息获取失败", msg: "请重新登陆试试", btnHiht: "重试", okHandle: {
 								[weak self] in
 								var _ = showLoginlert(self!.parentViewVC!, txtName: "", pwd: "", loginHandle: { (name, pwd) in
@@ -265,7 +267,7 @@ class LoginView: UIView {
 	}
 
 	func dec2hex(_ num: Int) -> String {
-		return String(format: " % 0X", num)
+		return String(format: " % 0X", num);
 	}
 
 	func encodeStr(_ str: String) -> String {

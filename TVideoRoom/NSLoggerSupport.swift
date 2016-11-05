@@ -1,13 +1,12 @@
 //
 //  NSLoggerSupport.swift
 //  TVideoRoom
-//
-//  Created by  on 16/6/22.
-//  Copyright © 2016年 . All rights reserved.
-//
 
 import NSLogger
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+
+
+
+private func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 	switch (lhs, rhs) {
 	case let (l?, r?):
 		return l < r
@@ -18,7 +17,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 	}
 }
 
-fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+private func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 	switch (lhs, rhs) {
 	case let (l?, r?):
 		return l >= r
@@ -103,25 +102,5 @@ extension String {
 
 		var range = dim > 0 ? Range<String.Index>(start..<end) : Range<String.Index>(end..<start);
 		return self.substring(with: range);
-//
-//
-//		let startIndex = self.index(start, offsetBy: s);// start.advancedBy(s)
-//		var end: String.Index
-//		var endIndex: String.Index
-//
-//		if (e == nil) {
-//			end = self.endIndex
-//			endIndex = self.endIndex
-//        } else {
-//			end = e >= 0 ? self.startIndex : self.endIndex
-//			endIndex =  self.index(end, offsetBy: e!);
-//		}
-//       // var resutlStr = self.substring(from: endIndex);
-//      //  resutlStr = resutlStr.substring(from: startIndex);
-//       // let range = Range<String>
-//	   let range = startIndex..<endIndex
-//       // LogHttp("s=\(s),e=\(e)----substring\(self.substring(with: range))");
-//		return self.substring(with: range);
-
 	}
 }

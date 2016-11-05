@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		Fabric.with([Crashlytics.self])
-		Flurry.startSession("WFCPF3QCTFGDXWQ9QFRJ");
+		Flurry.startSession("WFCPF3QCTFGDXWQ9QFRJ", with: FlurrySessionBuilder().withCrashReporting(true));
 		window = UIWindow(frame: ScreenBounds)
 		window!.makeKeyAndVisible();
-		#if DEBUG
-			LoggerStart(LoggerGetDefaultLogger())
-			LogMarker("strart");
-		#endif
+		// #if DEBUG
+		LoggerStart(LoggerGetDefaultLogger())
+		LogMarker("strart");
+		// #endif
 
 		let manVc = MainTabBarController();
 		manVc.adImage = UIImage(named: "LaunchImage");

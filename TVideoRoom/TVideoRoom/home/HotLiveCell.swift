@@ -36,9 +36,13 @@ class HotLiveCell: UICollectionViewCell {
 			self.imgHeadView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
 			self.imgHeadView.layer.cornerRadius = 20;
 			self.imgHeadView.layer.masksToBounds = true;
+
 			// self.imgHeadView.layer.borderColor = UIColor.gray.cgColor;
 			// self.imgHeadView.layer.borderWidth = 1;
 			self.imgBigView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
+			self.imgBigView.width = ScreenWidth;
+			self.imgBigView.height = ScreenWidth * 3 / 4;
+
 			imglive.isHidden = (hotData?.live_status == 0);
 			btnLocation.setTitle("来自神秘花园", for: UIControlState());
 			// let ico = "hlvr\(hotData!.lv_exp!.intValue)";
