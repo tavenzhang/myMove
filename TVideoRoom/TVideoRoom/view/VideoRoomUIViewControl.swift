@@ -151,6 +151,7 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 	}
 	// 测速并连接socket
 	fileprivate func c2sGetSocket(_ roomId: Int) {
+		DataCenterModel.sharedInstance.roomData.prepareRoomData();
 		let pathHttp = NSString(format: HTTP_VIDEO_ROOM as NSString, roomId, "false") as String;
 		DataCenterModel.sharedInstance.roomData.roomId = roomId;
 		DispatchQueue.global(qos: .default).async {
@@ -172,7 +173,6 @@ class VideoRoomUIViewVC: UIViewController, UIScrollViewDelegate {
 								serverList.append("\(item):\(port)") ;
 							}
 						}
-						DataCenterModel.sharedInstance.roomData.rtmpList.removeAll();
 						SocketManager.sharedInstance.testFastSocket(serverList);
 					}
 					else {

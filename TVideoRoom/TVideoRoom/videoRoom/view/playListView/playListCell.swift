@@ -25,7 +25,7 @@ class playListCell: UITableViewCell {
 		self.addSubview(lvImageView)
 		self.lvImageView.snp.makeConstraints { (make) in
 			make.centerY.equalTo(self);
-			make.left.equalTo(self.snp.left).offset(30);
+			make.right.equalTo(self.snp.right).offset(-30);
 		}
 		self.txtName.snp.makeConstraints { (make) in
 			make.centerX.equalTo(self);
@@ -33,9 +33,10 @@ class playListCell: UITableViewCell {
 			// make.left.equalTo(self.width / 2 - 50);
 		}
 
-		self.vipImageView.snp_makeConstraints { (make) in
+		self.vipImageView.snp.makeConstraints { (make) in
 			make.centerY.equalTo(self);
-			make.right.equalTo(self.snp.right).offset(-30);
+			make.left.equalTo(self.snp.left).offset(30);
+
 		}
 	}
 

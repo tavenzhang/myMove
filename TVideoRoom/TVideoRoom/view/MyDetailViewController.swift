@@ -49,7 +49,7 @@ class MyDetailViewController: BaseUIViewController, UITableViewDelegate, UITable
 		tableView.separatorInset = UIEdgeInsetsMake(0, 50, 0, 0);
 		tableView.rowHeight = (ScreenHeight * 2 / 3) / 10
 		flushTable();
-
+		infoView?.flushServiceModel();
 	}
 
 	func flushTable() {
@@ -198,6 +198,7 @@ class MyDetailViewController: BaseUIViewController, UITableViewDelegate, UITable
 						self?.resetData();
 						self?.infoView?.isLoginSucess = false;
 						self?.infoView?.resetDataView();
+						UserDefaults.standard.set(false, forKey: default_AUTO_LOGIN);
 					})
 				});
 			}

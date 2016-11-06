@@ -87,3 +87,6 @@ let ENTER_F2B_RUN: String = "ENTER_F2B_RUN";
 
 // 后台进入前台
 let ENTER_B2F_RUN: String = "ENTER_B2F_RUN";
+
+// 登陆成功以后处理
+let LOGIN_SUCCESS: String = "LOGIN_SUCCESS";

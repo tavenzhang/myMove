@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		Flurry.startSession("WFCPF3QCTFGDXWQ9QFRJ", with: FlurrySessionBuilder().withCrashReporting(true));
 		window = UIWindow(frame: ScreenBounds)
 		window!.makeKeyAndVisible();
-		// #if DEBUG
-		LoggerStart(LoggerGetDefaultLogger())
-		LogMarker("strart");
-		// #endif
+		#if DEBUG
+			LoggerStart(LoggerGetDefaultLogger())
+			LogMarker("strart");
+		#endif
 
 		let manVc = MainTabBarController();
 		manVc.adImage = UIImage(named: "LaunchImage");

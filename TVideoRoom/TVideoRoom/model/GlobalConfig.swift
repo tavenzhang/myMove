@@ -31,6 +31,7 @@ public let LFBGlobalBackgroundColor = UIColor.colorWithCustom(239, g: 239, b: 23
 public let LFBNavigationYellowColor = UIColor.colorWithCustom(253, g: 212, b: 49)
 
 //UserDefaults.standard 数据key
+public let default_AUTO_LOGIN = "auto_login"
 public let default_login_name = "login_name"
 public let default_login_pwd = "login_pwd"
 

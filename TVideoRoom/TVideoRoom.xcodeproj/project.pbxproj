@@ -35,6 +35,7 @@
 		DE32A2DE1DAB944400A97020 /* GiftChooseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32A2DD1DAB944400A97020 /* GiftChooseCell.swift */; };
 		DE32A2E21DABCBE500A97020 /* GiftMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32A2E11DABCBE500A97020 /* GiftMenuBar.swift */; };
 		DE32A2E41DAC6D2200A97020 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32A2E31DAC6D2200A97020 /* UIViewEx.swift */; };
+		DE336FB31DCDD458009401E7 /* DataTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE336FB21DCDD458009401E7 /* DataTools.swift */; };
 		DE3641621D004FC600A3FE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3641611D004FC600A3FE24 /* AppDelegate.swift */; };
 		DE3641641D004FC600A3FE24 /* VideoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3641631D004FC600A3FE24 /* VideoListController.swift */; };
 		DE3641671D004FC600A3FE24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3641651D004FC600A3FE24 /* Main.storyboard */; };
@@ -195,6 +196,7 @@
 		DE32A2DD1DAB944400A97020 /* GiftChooseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GiftChooseCell.swift; path = ../giftView/GiftChooseCell.swift; sourceTree = "<group>"; };
 		DE32A2E11DABCBE500A97020 /* GiftMenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftMenuBar.swift; sourceTree = "<group>"; };
 		DE32A2E31DAC6D2200A97020 /* UIViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
+		DE336FB21DCDD458009401E7 /* DataTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTools.swift; sourceTree = "<group>"; };
 		DE36415E1D004FC600A3FE24 /* TVideoRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVideoRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3641611D004FC600A3FE24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3641631D004FC600A3FE24 /* VideoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoListController.swift; path = ../../VideoListController.swift; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 				DE1645301D1FBE1A00E21B4A /* GlobeModel.swift */,
 				DEA01EC31DA5DAE60075411D /* ResourceString.swift */,
 				DE228D381DAFA97700424056 /* ErrorAlerString.swift */,
+				DE336FB21DCDD458009401E7 /* DataTools.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1305,6 +1308,7 @@
 				DEBE43AE1D1EF15100178DA7 /* BaseNavigationController.swift in Sources */,
 				DE7A27A81D1AD22100DAAD8C /* NSLoggerSupport.swift in Sources */,
 				DE228D391DAFA97700424056 /* ErrorAlerString.swift in Sources */,
+				DE336FB31DCDD458009401E7 /* DataTools.swift in Sources */,
 				DE16451B1D1F7C2D00E21B4A /* RankViewController.swift in Sources */,
 				DE09BF081DA8B9E7002D85B6 /* RankGiftViewControl.swift in Sources */,
 				DE09BF1B1DAA3861002D85B6 /* RoomDataModel.swift in Sources */,

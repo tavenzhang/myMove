@@ -199,7 +199,12 @@ class HttpTavenService {
 				}
 				else {
 					reulstH?.isSuccess = false;
-					LogHttp("http  recive<------not json data ==dataM:\(dataM.toUtf8String())");
+					#if DEBUG
+						LogHttp("http  recive<------not json data ==dataM:\(dataM.toUtf8String())");
+					#else
+						LogHttp("http  recive<------not json data ==dataM:\(dataM)");
+					#endif
+
 				}
 			case .failure(let error):
 				LogHttp("http  recive<------Request failed with error: \(error)");

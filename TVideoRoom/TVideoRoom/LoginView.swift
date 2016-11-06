@@ -18,6 +18,7 @@ class LoginView: UIView {
 	var imgViewLv: UIImageView?;
 	var imgHeadView: UIImageView?;
 	var defaultInfo: PersonInfoModel = PersonInfoModel();
+	var rbtAuto: UISwitch?;
 
 	weak var parentViewVC: MyDetailViewController?;
 	var reyBtn: UIButton?;
@@ -28,6 +29,7 @@ class LoginView: UIView {
 			reyBtn?.isHidden = isLoginSucess;
 			logBtn?.isHidden = isLoginSucess;
 			moneyTitle?.isHidden = !isLoginSucess;
+			rbtAuto?.isHidden = !isLoginSucess;
 		}
 	}
 	override init(frame: CGRect) {
@@ -35,6 +37,7 @@ class LoginView: UIView {
 		super.init(frame: frame);
 		setup();
 		resetDataView();
+		NotificationCenter.default.addObserver(self, selector: #selector(self.flushServiceModel), name: NSNotification.Name(LOGIN_SUCCESS), object: nil)
 	}
 
 	func resetDataView() {
@@ -47,12 +50,11 @@ class LoginView: UIView {
 		defaultInfo.uid = NSNumber(value: 000);
 		defaultInfo.points = NSNumber(value: 0);
 		imgViewLv?.isHidden = true;
-		DataCenterModel.sharedInstance.roomData.key = "";
 		updateMyInfo(defaultInfo);
 	}
 
 	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		fatalError("init(coder:) has not been implemented");
 	}
 
 	func setup() -> Void {
@@ -148,20 +150,29 @@ class LoginView: UIView {
 			make.centerY.equalTo((txtLv?.snp.centerY)!);
 			make.left.equalTo((txtLv?.snp.right)!).offset(20);
 		})
+		let alb = UILabel.labelSimpleToView(self, 13, UIColor.gray);
+		alb.text = "自动登陆:";
+		alb.snp.makeConstraints({ (make) in
+			make.centerY.equalTo((txtLv?.snp.centerY)!);
+			make.left.equalTo((imgViewLv?.snp.right)!).offset(20);
+		})
+		rbtAuto = UISwitch();
+		self.addSubview(rbtAuto!);
+		rbtAuto!.addTarget(self, action: #selector(self.changeAutoLogin), for: .valueChanged);
+		rbtAuto!.snp.makeConstraints({ (make) in
+			make.width.equalTo(50);
+			make.height.equalTo(20);
+			make.centerY.equalTo((txtLv?.snp.centerY)!).offset(-12);
+			make.left.equalTo(alb.snp.right).offset(5);
+		})
+		let statue = UserDefaults.standard.bool(forKey: default_AUTO_LOGIN);
+		rbtAuto!.setOn(statue, animated: true);
+
 	}
 
-	func crateUILable(_ container: UIView?, _ size: Int = 12, _ color: UIColor = UIColor.colorWithCustom(100, g: 100, b: 100)) -> UILabel {
-		let lb: UILabel = UILabel();
-		lb.font = UIFont(name: "Arial", size: 12);
-		lb.adjustsFontSizeToFitWidth = true;
-		lb.textAlignment = NSTextAlignment.left;
-		let color = UIColor.colorWithCustom(100, g: 100, b: 100);
-		lb.textColor = color;
-		if (container != nil)
-		{
-			container?.addSubview(lb);
-		}
-		return lb;
+	func changeAutoLogin() {
+		UserDefaults.standard.set(rbtAuto!.isOn, forKey: default_AUTO_LOGIN);
+		UserDefaults.standard.synchronize();
 	}
 
 	func updateMyInfo(_ info: PersonInfoModel) {
@@ -188,7 +199,16 @@ class LoginView: UIView {
 
 	func clickReg() {
 		Flurry.logEvent(flurry_btn_reg);
-		showSimplpAlertView(parentViewVC, tl: "", msg: "注册功能暂未开放!");
+		// showSimplpAlertView(parentViewVC, tl: "", msg: "注册功能暂未开放!");
+		showAlertHandle(nil, tl: "账号注册", cont: "请点击【前往】去网站注册！", okHint: "前往", cancelHint: "取消", canlHandle: nil) {
+			let url = URL(string: getWWWHttp(
+				"http://%@"));
+			if #available(iOS 10.0, *) {
+				UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+			} else {
+				UIApplication.shared.openURL(url!)
+			}
+		}
 
 	}
 
@@ -200,97 +220,36 @@ class LoginView: UIView {
 		mypwd = mypwd == nil ? "" : mypwd;
 		var _ = showLoginlert(parentViewVC, txtName: myName!, pwd: mypwd!)
 		{ (name, pwd) in
-			self.validLogin(name, pwd: pwd);
+			loginUser(name, pwd: pwd);
 		}
 	}
 
-	func validLogin(_ name: String, pwd: String) -> Void {
-		let passStr = encodeStr(pwd);
-		let paraList = ["uname": name, "password": passStr, "sCode": "", "v_remember": 0] as [String: Any];
+	func flushServiceModel() {
 
-		var _ = HttpTavenService.requestJsonWithHint(getWWWHttp(HTTP_LOGIN), loadingHint: "登陆验证中", isGet: false, para: paraList as [String: AnyObject]) { (httpResult) in
-			if (httpResult.isSuccess)
-			{
-				if (httpResult.dataJson?["status"].int! == 1)
-				{
-					let key = httpResult.dataJson!["msg"].string!;
-					DataCenterModel.sharedInstance.roomData.key = key;
-					HttpTavenService.requestJson(getWWWHttp(HTTP_GETUSR_INFO), completionHadble: { [weak self](httpResult) in
-						if (httpResult.isSuccess) {
-							let result = deserilObjectWithDictonary(httpResult.dataJson?.dictionaryObject
-								as! NSDictionary, cls: LoginModel.classForCoder()) as! LoginModel;
-							self?.defaultInfo = result.info!;
-							self?.updateMyInfo((self?.defaultInfo)!);
-							Flurry.logEvent(flurry_login_success, withParameters: ["name": (self?.defaultInfo)!.nickname!, "id": (self?.defaultInfo)!.uid]);
-							let imageUrl = NSString(format: HTTP_SMALL_IMAGE as NSString, (self?.defaultInfo.headimg!)!) as String;
-							self?.imgHeadView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
-							// 设置关注数据
-							self?.isLoginSucess = true;
-							if (result.myfav != nil) {
-								self?.parentViewVC?.focusModel?.msgNum = (result.myfav?.count)!;
-								self?.parentViewVC?.focusModel?.targeData = result.myfav as AnyObject?;
-							}
-							if (result.gg != nil)
-							{
-								self?.parentViewVC?.oneByoneData?.msgNum = (result.gg?.count)!;
-								self?.parentViewVC?.oneByoneData?.targeData = result.gg as AnyObject?;
-							}
-							// 设置私信
-							self?.parentViewVC?.privateMail?.msgNum = (result.myres?.count)!;
-							self?.parentViewVC?.privateMail?.targeData = result.myres as AnyObject?;
-							self?.parentViewVC?.flushTable();
-							UserDefaults.standard.set(name, forKey: default_login_name);
-							UserDefaults.standard.set(pwd, forKey: default_login_pwd);
-							UserDefaults.standard.synchronize();
-						}
-						else {
-							Flurry.logEvent(flurry_login_failre);
-							var _ = showSimplpAlertView(self?.parentViewVC!, tl: "个人信息获取失败", msg: "请重新登陆试试", btnHiht: "重试", okHandle: {
-								[weak self] in
-								var _ = showLoginlert(self!.parentViewVC!, txtName: "", pwd: "", loginHandle: { (name, pwd) in
-									self?.validLogin(name, pwd: pwd);
-								})
-							})
-						} })
-				}
-				else {
-					showSimplpAlertView(self.parentViewVC!, tl: "登陆失败", msg: "用户名密码错误", btnHiht: "重试", okHandle: {
-						[weak self] in
-						var _ = showLoginlert(self!.parentViewVC!, txtName: "", pwd: "", loginHandle: { (name, pwd) in
-							self?.validLogin(name, pwd: pwd);
-						})
-					})
-				}
-
-			}
-		}
-	}
-
-	func dec2hex(_ num: Int) -> String {
-		return String(format: " % 0X", num);
-	}
-
-	func encodeStr(_ str: String) -> String {
-		var es = [String]();
-		var s = str.characters.map { String($0) }
-		let lenth = s.count;
-		for i in 0 ..< lenth
+		if (DataCenterModel.sharedInstance.loginData != nil)
 		{
-			let c = s[i];
-			var ec = c.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed);
-			if (c == ec)
-			{
-				let ucodeNum = (c as NSString).character(at: 0)
-				let st = "00" + dec2hex(Int(ucodeNum));
-				ec = st.substring(st.characters.count, -2);
+			let result = DataCenterModel.sharedInstance.loginData!;
+			self.defaultInfo = result.info!;
+			self.updateMyInfo((self.defaultInfo));
+			Flurry.logEvent(flurry_login_success, withParameters: ["name": (self.defaultInfo).nickname!, "id": (self.defaultInfo).uid]);
+			let imageUrl = NSString(format: HTTP_SMALL_IMAGE as NSString, (self.defaultInfo.headimg!)) as String;
+			self.imgHeadView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
+			// 设置关注数据
+			self.isLoginSucess = true;
+			if (result.myfav != nil) {
+				self.parentViewVC?.focusModel?.msgNum = (result.myfav?.count)!;
+				self.parentViewVC?.focusModel?.targeData = result.myfav as AnyObject?;
 			}
-			es.append(ec!);
+			if (result.gg != nil)
+			{
+				self.parentViewVC?.oneByoneData?.msgNum = (result.gg?.count)!;
+				self.parentViewVC?.oneByoneData?.targeData = result.gg as AnyObject?;
+			}
+			// 设置私信
+			self.parentViewVC?.privateMail?.msgNum = (result.myres?.count)!;
+			self.parentViewVC?.privateMail?.targeData = result.myres as AnyObject?;
+			self.parentViewVC?.flushTable();
 		}
-		let resutStr = es.joined(separator: "");
-		let regular = try! NSRegularExpression(pattern: " / % / g", options: .caseInsensitive)
-		let nsNew = NSMutableString(string: resutStr);
-		regular.replaceMatches(in: nsNew, options: .reportProgress, range: NSMakeRange(0, resutStr.characters.count), withTemplate: "");
-		return nsNew as String;
-
 	}
+
 }

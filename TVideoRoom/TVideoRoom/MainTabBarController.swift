@@ -64,9 +64,11 @@ class MainTabBarController: UITabBarController {
 		tabBarControllerAddChildViewController(RankViewController(), title: "排行", imageName: r_tabBtn_rank, selectedImageName: r_tabBtn_rank_r, tag: 1)
 		tabBarControllerAddChildViewController(ActiveViewController(navigationTitle: "活动", urlStr: getWWWHttp(MyActivePage), isOpenNow: false), title: "活动", imageName: r_tabBtn_active, selectedImageName: r_tabBtn_active_r, tag: 2)
 		tabBarControllerAddChildViewController(MyDetailViewController(), title: "我", imageName: r_btn_me, selectedImageName: r_btn_me_r, tag: 3);
+		checkAutoLogin();
+
 	}
 
-	fileprivate func tabBarControllerAddChildViewController(_ childVC: UIViewController, title: String, imageName: String, selectedImageName: String, tag: Int) {
+	private func tabBarControllerAddChildViewController(_ childVC: UIViewController, title: String, imageName: String, selectedImageName: String, tag: Int) {
 		let vcItem = UITabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
 		vcItem.tag = tag
 
@@ -76,6 +78,21 @@ class MainTabBarController: UITabBarController {
 
 		let navigationVC = BaseNavigationController(rootViewController: childVC)
 		addChildViewController(navigationVC)
+	}
+
+	func checkAutoLogin() {
+		let domain = UserDefaults.standard.string(forKey: default_domain);
+		let statue = UserDefaults.standard.bool(forKey: default_AUTO_LOGIN);
+		let name = UserDefaults.standard.string(forKey: default_login_name);
+		let pwd = UserDefaults.standard.string(forKey: default_login_pwd);
+		if (statue == true && ((name != nil) && (name != "")) && ((pwd != nil) && (pwd != "")) && ((domain != nil) && (domain != "")))
+		{
+			if (DataCenterModel.isLogin == false)
+			{
+				loginUser(name!, pwd: pwd!);
+			}
+
+		}
 	}
 
 }

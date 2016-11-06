@@ -84,10 +84,6 @@ class UIChatControl: UIViewController {
      发送聊天消息
      */
 	func chatSendChatMessage(_ msg: String!) -> Void {
-//		let mees = ChatMessage();
-//		mees.messageType = .Text;
-//		mees.content = msg;
-//		chatVc?.receiveMessage(mees);
 		if (!DataCenterModel.isLogin)
 		{
 			showSimplpAlertView(self, tl: "", msg: "您还未登录不能发言", btnHiht: "登录", okHandle: { [weak self] in

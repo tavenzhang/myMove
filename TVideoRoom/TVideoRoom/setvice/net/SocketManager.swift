@@ -23,8 +23,7 @@ class SocketManager {
 	// 测速并选择最快的socket
 	func testFastSocket(_ ipList: [String]) -> Void
 	{
-		DataCenterModel.sharedInstance.roomData.socketIp = nil;
-		DataCenterModel.sharedInstance.roomData.port = 0;
+		DataCenterModel.sharedInstance.roomData.socketIp = "";
 		for item in ipList {
 			DispatchQueue.global().async {
 				var as3Socket: Amf3SocketManager? = Amf3SocketManager(heartTime: 10, msgHeadSize: 2, isByteBigEndian: true);
@@ -36,7 +35,7 @@ class SocketManager {
 					as3Socket = nil;
 					DispatchQueue.main.async {
 						[weak self] in
-						if (DataCenterModel.sharedInstance.roomData.socketIp == nil)
+						if (DataCenterModel.sharedInstance.roomData.socketIp == "")
 						{
 							LogSocket("best choose line =\(ip)---port--\(port)---finished!");
 							DataCenterModel.sharedInstance.roomData.socketIp = ip;
@@ -89,8 +88,8 @@ class SocketManager {
 				s_msge = s_msg_10001(cmd: MSG_10001, _roomId: dataCenterM.roomData.roomId, _pass: dataCenterM.roomData.pass, _roomLimit: r_msg!.getAesk(), _isPublish: dataCenterM.roomData.isPublish, _publishUrl: dataCenterM.roomData.publishUrl, _sid: dataCenterM.roomData.sid, _key: "d382538698b6e79c7d2ea8914e12e623");
 			}
 			else {
-				let r_msg = r_msg_10000(_data: (dataCenterM.roomData.key + String(dataCenterM.roomData.roomId) + "73uxh9*@(58u)fgxt"), _aesKey: dataCenterM.roomData.aeskey);
-				s_msge = s_msg_10001(cmd: MSG_10001, _roomId: dataCenterM.roomData.roomId, _pass: dataCenterM.roomData.pass, _roomLimit: r_msg.getAesk(), _isPublish: dataCenterM.roomData.isPublish, _publishUrl: dataCenterM.roomData.publishUrl, _sid: dataCenterM.roomData.sid, _key: dataCenterM.roomData.key);
+				let r_msg = r_msg_10000(_data: (dataCenterM.roomData.userkey + String(dataCenterM.roomData.roomId) + "73uxh9*@(58u)fgxt"), _aesKey: dataCenterM.roomData.aeskey);
+				s_msge = s_msg_10001(cmd: MSG_10001, _roomId: dataCenterM.roomData.roomId, _pass: dataCenterM.roomData.pass, _roomLimit: r_msg.getAesk(), _isPublish: dataCenterM.roomData.isPublish, _publishUrl: dataCenterM.roomData.publishUrl, _sid: dataCenterM.roomData.sid, _key: dataCenterM.roomData.userkey);
 			}
 			socketM!.sendMessage(s_msge);
 		case MSG_10001:
@@ -114,6 +113,16 @@ class SocketManager {
 			let playerMode = deserilObjectWithDictonary(json.dictionaryObject! as NSDictionary, cls: playInfoModel.self) as! playInfoModel! ;
 			dataCenterM.roomData.changPlayerList([playerMode!]);
 			noticeMsgMianThread(PlayLIST_CHANGE, nil);
+			if (json["richLv"].int! >= 2 || json["vip"].int! > 0)
+			{
+				var msgVo: ChatMessage?;
+				msgVo = ChatMessage();
+				msgVo?.sendName = "欢迎 [" + json["name"].string! + "] 进入直播间!";
+				msgVo?.content = "";
+				msgVo?.isSender = false;
+				msgVo?.messageType = .text;
+				noticeMsgMianThread(E_SOCKERT_Chat_30001, msgVo!)
+			}
 		case MSG_11003: // 退出房间
 			let playerMode = deserilObjectWithDictonary(json.dictionaryObject! as NSDictionary, cls: playInfoModel.self) as! playInfoModel! ;
 			dataCenterM.roomData.changPlayerList([playerMode!], isDelete: true);
@@ -121,7 +130,6 @@ class SocketManager {
 		case MSG_11008: // 获取管理员列表
 			fallthrough;
 		case MSG_11001: // 获取用户列表
-			dataCenterM.roomData.playerList.removeAll();
 			let sarray = json["items"].arrayObject as? NSArray;
 			if (sarray != nil) && ((sarray?.count)! > 0)
 			{
@@ -243,18 +251,6 @@ class SocketManager {
 				noticeMsgMianThread(RTMP_START_PLAY, "" as AnyObject?);
 			}
 			break;
-		case MSG_11002:
-			if (json["richLv"].int! >= 2)
-			{
-				var msgVo: ChatMessage?;
-				msgVo = ChatMessage();
-				msgVo?.sendName = "欢迎 [" + json["name"].string! + "] 进入直播间!";
-				msgVo?.content = "";
-				msgVo?.isSender = false;
-				msgVo?.messageType = .text;
-				noticeMsgMianThread(E_SOCKERT_Chat_30001, msgVo!)
-			}
-			break
 		case MSG_30001:
 			let type = json["type"].int;
 			var msgVo: ChatMessage?;

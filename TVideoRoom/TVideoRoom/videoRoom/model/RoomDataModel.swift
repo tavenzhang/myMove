@@ -11,7 +11,7 @@ class RoomData: NSObject {
 	var publishUrl = "";
 	var myMoney = 0;
 	// var key = "d382538698b6e79c7d2ea8914e12e623";
-	var key = "";
+	var userkey = "";
 	var aeskey = "";
 	var rtmpList = [RtmpInfo]();
 	var lastRtmpUrl: String = "";
@@ -76,11 +76,19 @@ class RoomData: NSObject {
 		isPublish = false;
 		publishUrl = "";
 		myMoney = 0;
-		key = "";
+		userkey = "";
 		aeskey = "";
 		rtmpList.removeAll();
 		lastRtmpUrl = "";
 		uid = ""
+	}
+	// 重新进入房间数据预处理
+	func prepareRoomData() {
+		rtmpList.removeAll();
+		playerList.removeAll();
+		lastRtmpUrl = "";
+		DataCenterModel.sharedInstance.roomData.socketIp = "";
+		DataCenterModel.sharedInstance.roomData.port = 0;
 	}
 
 }

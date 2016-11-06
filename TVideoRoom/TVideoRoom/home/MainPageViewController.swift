@@ -170,6 +170,17 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 							UserDefaults.standard.set(HTTP_ACITVE_PAGE, forKey: default_Active);
 							UserDefaults.standard.synchronize();
 						}
+						let statue = UserDefaults.standard.bool(forKey: default_AUTO_LOGIN);
+						let name = UserDefaults.standard.string(forKey: default_login_name);
+						let pwd = UserDefaults.standard.string(forKey: default_login_pwd);
+						if (statue == true && ((name != nil) && (name != "")) && ((pwd != nil) && (pwd != "")))
+						{
+							if (DataCenterModel.isLogin == false)
+							{
+								loginUser(name!, pwd: pwd!);
+							}
+
+						}
 					}
 				}
 
@@ -192,7 +203,7 @@ class MainPageViewController: UIViewController, UIScrollViewDelegate {
 		let page: CGFloat = scrollView.contentOffset.x / ScreenWidth
 		if ((self.menuBar) != nil)
 		{
-            let offsetX: CGFloat = scrollView.contentOffset.x / ScreenWidth * (self.menuBar!.width * 0.5 - Home_Seleted_Item_W * 0.5 - 15);
+			let offsetX: CGFloat = scrollView.contentOffset.x / ScreenWidth * (self.menuBar!.width * 0.5 - Home_Seleted_Item_W * 0.5 - 15);
 			self.menuBar!.underLine.x = 15 + offsetX
 			if page == 1 {
 				self.menuBar!.underLine.x = offsetX + 10
