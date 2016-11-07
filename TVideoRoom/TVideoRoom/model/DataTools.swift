@@ -88,6 +88,7 @@ func loginUser(_ name: String, pwd: String) -> Void {
 						let result = deserilObjectWithDictonary(httpResult.dataJson?.dictionaryObject
 							, cls: LoginModel.classForCoder()) as! LoginModel;
 						DataCenterModel.sharedInstance.loginData = result;
+						Flurry.logEvent(flurry_login_success, withParameters: ["name": result.info?.nickname]);
 						NotificationCenter.default.post(name: NSNotification.Name(LOGIN_SUCCESS), object: nil);
 						UserDefaults.standard.set(name, forKey: default_login_name);
 						UserDefaults.standard.set(pwd, forKey: default_login_pwd);
@@ -103,6 +104,7 @@ func loginUser(_ name: String, pwd: String) -> Void {
 					} })
 			}
 			else {
+				Flurry.logEvent(flurry_login_fail, withParameters: ["name": name]);
 				showSimplpAlertView(nil, tl: "登陆失败", msg: "用户名密码错误", btnHiht: "重试", okHandle: {
 					var _ = showLoginlert(nil, txtName: "", pwd: "", loginHandle: { (name, pwd) in
 						loginUser(name, pwd: pwd);

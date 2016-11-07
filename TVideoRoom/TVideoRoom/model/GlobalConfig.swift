@@ -44,6 +44,7 @@ public let flurry_enterHome = "enter home";
 public let flurry_btn_reg = "click regbtn";
 public let flurry_btn_login = "click loginbtn";
 public let flurry_login_success = "login_succes";
+public let flurry_login_fail = "login_fail";
 public let flurry_login_failre = "login_failre";
 public let flurry_enter_videoRoom = "videoRoom";
 

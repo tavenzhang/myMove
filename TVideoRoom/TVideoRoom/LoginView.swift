@@ -231,7 +231,6 @@ class LoginView: UIView {
 			let result = DataCenterModel.sharedInstance.loginData!;
 			self.defaultInfo = result.info!;
 			self.updateMyInfo((self.defaultInfo));
-			Flurry.logEvent(flurry_login_success, withParameters: ["name": (self.defaultInfo).nickname!, "id": (self.defaultInfo).uid]);
 			let imageUrl = NSString(format: HTTP_SMALL_IMAGE as NSString, (self.defaultInfo.headimg!)) as String;
 			self.imgHeadView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "v2_placeholder_full_size"));
 			// 设置关注数据

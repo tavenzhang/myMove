@@ -268,6 +268,11 @@ class SocketManager {
 				msgVo = ChatMessage();
 				msgVo?.sendName = semdName;
 				msgVo?.content = json["content"].string!;
+				msgVo?.content = (msgVo?.content.replace(target: "@sendUid", withString: json["sendName"].string!))!
+				msgVo?.content = (msgVo?.content.replace(target: "||", withString: ""))!
+				msgVo?.content = (msgVo?.content.replace(target: "@icon", withString: ""))!
+				msgVo?.content = (msgVo?.content.replace(target: "@recIcon", withString: ""))!
+				msgVo?.content = (msgVo?.content.replace(target: "@link", withString: ""))!
 				msgVo?.isSender = false;
 				msgVo?.messageType = .text;
 			}
