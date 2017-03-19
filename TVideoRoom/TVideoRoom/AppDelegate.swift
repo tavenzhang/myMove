@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			LoggerStart(LoggerGetDefaultLogger())
 			LogMarker("strart");
 		#endif
-
 		let manVc = MainTabBarController();
 		manVc.adImage = UIImage(named: "LaunchImage");
 		window?.rootViewController = manVc;

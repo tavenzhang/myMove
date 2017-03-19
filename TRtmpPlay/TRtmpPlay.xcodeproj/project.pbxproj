@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D81AC5F822E43D613CA3219 /* Pods_TRtmpPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BD11479A75367EA4D9D26C /* Pods_TRtmpPlay.framework */; };
 		DE6DEA561D1D1B0E001A72B9 /* TRtmpPlay.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6DEA551D1D1B0E001A72B9 /* TRtmpPlay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE6DEA6D1D1D1C68001A72B9 /* KxAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6DEA5E1D1D1C68001A72B9 /* KxAudioManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE6DEA6E1D1D1C68001A72B9 /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6DEA5F1D1D1C68001A72B9 /* KxAudioManager.m */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5BD11479A75367EA4D9D26C /* Pods_TRtmpPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TRtmpPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6DEA521D1D1B0E001A72B9 /* TRtmpPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRtmpPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6DEA551D1D1B0E001A72B9 /* TRtmpPlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRtmpPlay.h; sourceTree = "<group>"; };
 		DE6DEA571D1D1B0E001A72B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,8 @@
 		DEDF32F91D1DB90700E55128 /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = ../libs/libpostproc.a; sourceTree = "<group>"; };
 		DEDF33091D1DBB4200E55128 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = ../libs/libx264.a; sourceTree = "<group>"; };
 		DEE870D61D57920F004103F5 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		E5522C8E3B7000931F019745 /* Pods-TRtmpPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRtmpPlay.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TRtmpPlay/Pods-TRtmpPlay.release.xcconfig"; sourceTree = "<group>"; };
+		F62B272A6F79D5C58272EE88 /* Pods-TRtmpPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRtmpPlay.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TRtmpPlay/Pods-TRtmpPlay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,30 @@
 				DEDF33071D1DB9C000E55128 /* libswresample.a in Frameworks */,
 				DEDF33081D1DB9C000E55128 /* libswscale.a in Frameworks */,
 				DE6DEADF1D1D4E73001A72B9 /* VideoToolbox.framework in Frameworks */,
+				9D81AC5F822E43D613CA3219 /* Pods_TRtmpPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CFACD21D8551BB138022CB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BD11479A75367EA4D9D26C /* Pods_TRtmpPlay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CB18F9001B8FD906084B615 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F62B272A6F79D5C58272EE88 /* Pods-TRtmpPlay.debug.xcconfig */,
+				E5522C8E3B7000931F019745 /* Pods-TRtmpPlay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE6DEA481D1D1B0E001A72B9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,8 @@
 				DE6DEA5D1D1D1C68001A72B9 /* kxmovie */,
 				DE6DEA541D1D1B0E001A72B9 /* TRtmpPlay */,
 				DE6DEA531D1D1B0E001A72B9 /* Products */,
+				8CB18F9001B8FD906084B615 /* Pods */,
+				6CFACD21D8551BB138022CB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,10 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE6DEA5A1D1D1B0E001A72B9 /* Build configuration list for PBXNativeTarget "TRtmpPlay" */;
 			buildPhases = (
+				7CC45E6A52E28E7181233636 /* [CP] Check Pods Manifest.lock */,
 				DE6DEA4D1D1D1B0E001A72B9 /* Sources */,
 				DE6DEA4E1D1D1B0E001A72B9 /* Frameworks */,
 				DE6DEA4F1D1D1B0E001A72B9 /* Headers */,
 				DE6DEA501D1D1B0E001A72B9 /* Resources */,
+				B1547DD16184940F40EEF658 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +292,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CC45E6A52E28E7181233636 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1547DD16184940F40EEF658 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TRtmpPlay/Pods-TRtmpPlay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE6DEA4D1D1D1B0E001A72B9 /* Sources */ = {
@@ -384,6 +443,7 @@
 		};
 		DE6DEA5B1D1D1B0E001A72B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62B272A6F79D5C58272EE88 /* Pods-TRtmpPlay.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -417,6 +477,7 @@
 		};
 		DE6DEA5C1D1D1B0E001A72B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5522C8E3B7000931F019745 /* Pods-TRtmpPlay.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinhua Zhang (23DN84VL44)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

@@ -6,9 +6,9 @@ import SVProgressHUD;
 
 var HTTP_VERSION = "https://raw.githubusercontent.com/ataven2016/tvideo/master/verson.json";
 
-var Http_Domain: String = "";
-var Http_VDomain: String = "";
-var Http_PDomain: String = "";
+var Http_Domain: String = "www.rqpovc.com";
+var Http_VDomain: String = "v.rqpovc.com";
+var Http_PDomain: String = "s.1room1.co";
 
 var HTTP_ACITVE_PAGE: String = "http://%@/act";
 

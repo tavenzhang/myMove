@@ -4,6 +4,9 @@
    <FileRef
       location = "group:TNetServer.xcodeproj">
    </FileRef>
+    <FileRef
+      location = "group:TRtmpPlay/TRtmpPlay.xcodeproj">
+   </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

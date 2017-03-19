@@ -39,7 +39,6 @@ class MainTabBarController: UITabBarController {
 //		#endif
 		addNotifycation();
 		self.delegate = self;
-
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
